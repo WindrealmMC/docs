@@ -10,18 +10,25 @@ hero:
     alt: windrealm logo
   actions:
     - theme: brand
-      text: '关于'
+      text: '关于我们'
       link: /about
     - theme: alt
-      text: '加入我们'
-      link: /about.html#加入服务器
+      text: '加入服务器'
+      link: /joinserver
+    - theme: alt
+      text: '加入QQ群'
+      link: /joingroup
 
 features:
-  - title: '关于'
-    details: '前往about.html'
+  - title: '关于我们'
+    details: '风绘之境详情'
     link: /about
 
-  - title: '联系我们'
-    details: '前往contact.html'
-    link: /contact
+  - title: '加入服务器'
+    details: '获取服务器地址'
+    link: /joinserver
+
+  - title: '加入QQ群'
+    details: '前往联系页'
+    link: /joingroup
 ---

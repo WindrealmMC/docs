@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
 
+  outDir: '../docs',
   base: '/',
   lang: 'zh-Hans',
   title: "风绘之境",
@@ -48,7 +49,6 @@ export default defineConfig({
     sidebar: {
       '/': { base: '/', items: sidebarWindrealm() },
     },
-
 
     nav: [
       { text: '首页', link: '/' },
@@ -122,20 +122,36 @@ export default defineConfig({
 function sidebarWindrealm(): DefaultTheme.SidebarItem[] {
   return [
     {
+      text: '更多信息',
       items: [
         {
-          text: '关于',
           items: [
-            { text: '关于', link: 'about' }
-          ],
-        },
-        {
-          text: '联系我们',
-          items: [
-            { text: '联系我们', link: 'contact' }
-          ],
-        },
-      ],
+            { text: '关于', link: 'about' },
+            { text: '兼容', link: 'compatible' },
+            { text: '联系我们', link: 'contact' },
+          ]
+        }
+      ]
     },
+    {
+      text: '加入服务器！',
+      items: [
+        {
+          items: [
+            { text: '获取地址', link: 'joinserver' }
+          ]
+        }
+      ]
+    },
+    {
+      text: '加入群组',
+      items: [
+        {
+          items: [
+            { text: '官方QQ群', link: 'joingroup' }
+          ]
+        }
+      ]
+    }
   ]
 }
