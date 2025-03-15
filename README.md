@@ -1,0 +1,2 @@
+- 代码部分采用 [Creative Commons Zero 许可证](LICENSE-CC0)
+- 文档和资源采用 [CC BY-SA 4.0 许可证](LICENSE)

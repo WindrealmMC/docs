@@ -1,0 +1,177 @@
+/**
+ * 通过覆盖 CSS 变量来自定义默认主题样式:
+ * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+ */
+
+/**
+ * 颜色：背景
+ *
+ * - 'bg'：用于主屏幕的 bg 颜色。
+ *
+ * - 'bg-alt'： 用于 “sidebar” 等位置的替代 bg 颜色，
+ * 或 “code block” 的 ID 或 “code block” 来调用。
+ *
+ * - 'bg-elv'：升高的 bg 颜色。这用于它 “float” 的部分，
+ * 例如“dialog”。
+ *
+ * - 'bg-soft'：用于稍微区分某些组件的 bg 颜色
+ * 页面。用于 “carbon ads” 或 “table” 等内容。
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #f6f6f7;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-bg-soft: #f6f6f7;
+}
+
+.dark {
+  --vp-c-bg: #1A1A1A;
+  --vp-c-bg-alt: #191919;
+  --vp-c-bg-elv: #2A2A2A;
+  --vp-c-bg-soft: #2A2A2A;
+}
+
+/**
+ * 组件：侧边栏
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-sidebar-width: 272px;
+  --vp-sidebar-bg-color: var(--vp-c-bg-alt);
+}
+
+/**
+ *颜色
+ *
+ * 每种颜色都有完全相同的色阶系统，有 3 个纯色级别
+ * 具有不同亮度的颜色，以及 1 种柔和的颜色。
+ *
+ * - 'XXX-1'：主要用于彩色文本的最纯色。它必须
+ * 满足在“XXX-soft”上使用时的对比度。
+ *
+ * - 'XXX-2'：主要用于按钮悬停状态的颜色。
+ *
+ * - 'XXX-3'：纯色背景的颜色，例如按钮的 bg 颜色。
+ * 它必须满足纯白色 （#ffffff） 文本的对比度
+ * 顶部。
+ *
+ * - 'XXX-soft'：用于细微背景（如自定义容器）的颜色
+ * 或徽章。在放置 'XXX-1' 颜色时，它必须满足对比度
+ * 在它之上。
+ *
+ * 柔和的颜色必须是半透明的 Alpha 通道。这是至关重要的
+ * 因为它允许将多种“柔和”颜色相互叠加
+ * 创建重音符号，例如当内部有内联代码块时
+ * 自定义容器。
+ *
+ * - 'default'：仅用于细微指示的颜色，没有任何
+ * 附加的特殊含义，例如菜单悬停状态的 BG 颜色。
+ *
+ * - 'brand'：用于品牌主要颜色，例如链接文本、带有
+ * 品牌主题等
+ *
+ * - 'tip'：用于表示有用的信息。默认主题使用
+ * 品牌颜色。
+ *
+ * - 'warning'：用于向用户发出警告。用于自定义
+ * 容器、徽章等
+ *
+ * - 'danger'：用于向用户显示错误或危险消息。使用
+ * 在自定义容器、徽章等中。
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-c-default-1: var(--vp-c-gray-1);
+  --vp-c-default-2: var(--vp-c-gray-2);
+  --vp-c-default-3: var(--vp-c-gray-3);
+  --vp-c-default-soft: var(--vp-c-gray-soft);
+
+  --vp-c-brand-1: #2ECC71;
+  --vp-c-brand-2: #27AE60;
+  --vp-c-brand-3: #10b981;
+  --vp-c-brand-soft: rgba(167, 243, 208, 0.14);
+
+  --vp-c-tip-1: var(--vp-c-brand-1);
+  --vp-c-tip-2: var(--vp-c-brand-2);
+  --vp-c-tip-3: var(--vp-c-brand-3);
+  --vp-c-tip-soft: var(--vp-c-brand-soft);
+
+  --vp-c-warning-1: var(--vp-c-yellow-1);
+  --vp-c-warning-2: var(--vp-c-yellow-2);
+  --vp-c-warning-3: var(--vp-c-yellow-3);
+  --vp-c-warning-soft: var(--vp-c-yellow-soft);
+
+  --vp-c-danger-1: var(--vp-c-red-1);
+  --vp-c-danger-2: var(--vp-c-red-2);
+  --vp-c-danger-3: var(--vp-c-red-3);
+  --vp-c-danger-soft: var(--vp-c-red-soft);
+}
+
+/**
+ * 组件：按钮
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: var(--vp-c-white);
+  --vp-button-brand-bg: var(--vp-c-brand-3);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: var(--vp-c-white);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-text: var(--vp-c-white);
+  --vp-button-brand-active-bg: var(--vp-c-brand-1);
+}
+
+/**
+ * 组件：主页
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    120deg,
+    #27AE60 30%,
+    #2dd4bf
+  );
+
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    #27AE60 50%,
+    #2dd4bf 50%
+  );
+  --vp-home-hero-image-filter: blur(44px);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --vp-home-hero-image-filter: blur(56px);
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    --vp-home-hero-image-filter: blur(68px);
+  }
+}
+
+/**
+ * 组件：自定义块
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-custom-block-tip-border: transparent;
+  --vp-custom-block-tip-text: var(--vp-c-text-1);
+  --vp-custom-block-tip-bg: var(--vp-c-brand-soft);
+  --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
+}
+
+/**
+ * 组件： Algolia
+ * -------------------------------------------------------------------------- */
+
+.DocSearch {
+  --docsearch-primary-color: var(--vp-c-brand-1) !important;
+}
+
