@@ -52,7 +52,7 @@ export default defineConfig({
 
     nav: [
       { text: '首页', link: '/' },
-      { text: '主站', link: 'https://mikufun.top' }
+      { text: '主站', link: 'https://www.mikufun.top' }
     ],
 
     socialLinks: [
